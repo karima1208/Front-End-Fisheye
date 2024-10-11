@@ -3,9 +3,36 @@
 }
 
 .photograph-header {
+    display: flex;
     background-color: #FAFAFA;
-    height: 300px;
+    height: 200px;
     margin: 0 100px;
+}
+
+.photographer-portrait img {
+    object-fit: cover;
+    display: flex;
+    width: 150px; 
+    height: 150PX; 
+    max-width: 100%; /* Pour que l'image ne dépasse pas son conteneur */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 25px;
+    margin-left: 200px;  
+}
+
+.photographer-portrait {
+    display: flex;
+  
+   
+}
+.photographer-info{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.photographer-container {
+    display: flex;
+ 
 }
 
 .contact_button {
@@ -19,6 +46,17 @@
     background-color: #901C1C;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 70px;
+   
+    white-space: nowrap;
+}
+
+.media-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Trois colonnes de taille égale */
+    gap: 20px; /* Espacement entre les cartes */
+    margin-left: 80px;
+    margin-top: 50px;
 }
 
 .modal {
@@ -73,4 +111,24 @@ form input {
     height: 68px;
     border: none;
     border-radius: 5px;
+}
+.imagephoto{
+    object-fit: cover;
+    width: 200px; 
+    height: 200PX; 
+    
+}
+.media-info{
+    display: flex;
+    color: #901C1C;
+    justify-content: space-between;
+    width: 200px;
+}
+
+p{
+    margin: 0;
+}
+.likes-container{
+    white-space: nowrap;/*empêche le cœur de passer à la ligne suivante et oblige le titre à sauter à la ligne en cas de manque de place*/
+    margin-right: 0px;
 }
