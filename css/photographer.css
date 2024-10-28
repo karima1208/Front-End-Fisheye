@@ -1,40 +1,45 @@
-#contact_modal {
-    display: none;
-}
-
+header .logo {
+    margin-left: 0;
+  }
 .photograph-header {
     display: flex;
     background-color: #FAFAFA;
-    height: 200px;
-    margin: 0 100px;
+    height: 300px;flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    border-radius: 5px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
-
-.photographer-portrait img {
-    object-fit: cover;
+h1.photographer-name {
+    color: rgba(211, 87, 60, 1);
+    font-size: 64px;
+    font-weight: 400;
+    margin: 36px 0px 5px 0px;
+  }
+  .photographer-address {
+    font-size: 24px;
+    font-weight: 400;
+    color: #901c1c;
+    margin: 10px 0px;
+    font-style: normal;
+  }
+  .photographer-infos p {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(82, 82, 82, 1);
+    margin-top: 15px;
+  }
+  .contact_button-container {
     display: flex;
-    width: 150px; 
-    height: 150PX; 
-    max-width: 100%; /* Pour que l'image ne dépasse pas son conteneur */
-    border-radius: 50%;
-    object-fit: cover;
-    margin-top: 25px;
-    margin-left: 200px;  
-}
-
-.photographer-portrait {
-    display: flex;
-  
-   
-}
-.photographer-info{
-    margin-top: 20px;
-    margin-left: 20px;
-}
-.photographer-container {
-    display: flex;
- 
-}
-
+    justify-content: center;
+    flex-direction: column;
+  }
+  .contact_button-container :hover {
+    background-color: #db8876;
+    color: black;
+  }
 .contact_button {
     font-size: 20px;
     font-weight: bold;
@@ -47,9 +52,28 @@
     border-radius: 5px;
     cursor: pointer;
     margin-top: 70px;
-   
     white-space: nowrap;
 }
+.contact_button :hover {
+    color: black;
+  }
+  .photographer-portrait {
+    display: flex;
+  }
+  .photographer-portrait img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    clip-path: circle(100px);
+  }
+  section.filter p {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 49px;
+    margin-top: 23px;
+  }
+
+  /****************************************/
 
 .media-container{
     display: grid;
@@ -59,25 +83,152 @@
     margin-top: 50px;
 }
 
+.imagephoto{
+    object-fit: cover;
+    width: 200px; 
+    height: 200PX; 
+   
+  }
+  .media-info{
+    display: flex;
+    color: #901C1C;
+    justify-content: space-between;
+    width: 200px;
+  }
+  
+  p{
+    margin: 0;
+  }
+
+.medias-filter {
+    margin: 20px 0 56px;
+    padding-left: 55px;
+  }
+  
+  .medias-filter_label {
+    font-weight: 700;
+  }
+  
+  .medias-filter_select {
+    height: 60px;
+    width: 170px;
+    background-color: #901c1c;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  .hide {
+    display: none;
+  }
+  
+  .media {
+    display: flex;
+    flex-direction: row;
+    gap: 95px;
+    flex-wrap: wrap;
+  }
+  .media-card {
+    width: 350px;
+    height: 350px;
+    color: #901c1c;
+  }
+  .media-card .media-container {
+    width: 350px;
+    height: 300px;
+  }
+  .media-card .media-container img,
+  .media-card .media-container video {
+    object-fit: cover;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+  }
+  .media-card .media-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  .media-info h2 {
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .media-info i {
+    margin-left: 3px;
+  }
+
+.like-container {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;/*empêche le cœur de passer à la ligne suivante et oblige le titre à sauter à la ligne en cas de manque de place*/
+    margin-right: 0px;
+  }
+  .btn-like {
+    border: none;
+    background-color: transparent;
+    color: #901c1c;
+    font-size: large;
+  }
+  
+  #contact_modal {
+    width: 100%;
+    height: 100%;
+    background: rgba(196, 196, 196, 0.4);
+    padding-top: 80px;
+  }
+  #contact-me {
+    font-size: 64px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+    margin: 0 0 40px 0;
+    padding: 0;
+    text-align: left;
+  }
+  .likes-widget {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #db8876;
+    width: 376px;
+    height: 60px;
+    border-radius: 5px 5px 0 0;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    right: 36px;
+    font-size: 24px;
+  }
 .modal {
     border-radius: 5px;
     background-color: #DB8876;
-    width: 50%;
+    width: 669px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding: 35px;
     margin: auto;
+    -webkit-box-shadow: -3px 9px 34px -2px rgba(0,0,0,0.56); 
+    box-shadow: -3px 9px 34px -2px rgba(0,0,0,0.56);
 }
 
 .modal header {
     justify-content: space-between;
     width: 100%;
+    height: auto;
 }
 
 .modal header img {
     cursor: pointer;
+    position: absolute;
+    margin-left: 647px;
+    margin-top: -190px;
 }
 
 .modal header h2 {
@@ -86,49 +237,38 @@
     text-align: center;
 }
 
+
 form {
     display: flex;
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
-}
-
-form label {
-    color: #312E2E;
+  }
+  
+  form label {
+    color: #312e2e;
     font-size: 36px;
-}
-
-form div {
+  }
+  
+  form div {
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: self-start;
     margin-bottom: 26px;
-}
-
-form input {
+  }
+  
+  form input {
     width: 100%;
     height: 68px;
     border: none;
     border-radius: 5px;
-}
-.imagephoto{
-    object-fit: cover;
-    width: 200px; 
-    height: 200PX; 
-    
-}
-.media-info{
-    display: flex;
-    color: #901C1C;
-    justify-content: space-between;
-    width: 200px;
-}
-
-p{
-    margin: 0;
-}
-.likes-container{
-    white-space: nowrap;/*empêche le cœur de passer à la ligne suivante et oblige le titre à sauter à la ligne en cas de manque de place*/
-    margin-right: 0px;
-}
+    font-size: 25px;
+  }
+  
+  form textarea {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 25px;
+  }

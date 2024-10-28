@@ -2,38 +2,92 @@
 <html>
   <head>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/photographer.css" rel="stylesheet" type="text/css" />
+    <link href="css/lightbox.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
     <title>Fisheye - photographe </title>
   </head>
   <body>
-    <header>
-      <img src="assets/images/logo.png" class="logo" />
-    </header>
+
+    <header class="container">
+      <a href="./">
+        <img src="assets/images/logo.png" class="logo" />
+      </a>
+      </header>
     <main id="main">
-      <div class="photograph-header">
-        
-      </div>
-      <div class="media-container"></div>
+      <section class="photograph-header">
+        <div class="photographer-infos">
+          <h1 class="photographer-name"></h1>
+          <address role="presentation" class="photographer-address">
+            <span tabindex="0"></span>
+          </address>
+          <p class="photographer-tagline" tabindex="0"></p>
+        </div>
+        <div class="contact_button-container">
+          <button class="contact_button">Contactez-moi</button>
+        </div>
+        <div class="photographer-img"></div>
+      </section>
+
+
+      <div class="likes-widget">
+        <div class="likes-widget__details">
+            <span class="likes-widget__count total-likes" tabindex="0">0</span>
+            <em class="fa-solid fa-heart likes-widget__icon"></em>
+        </div>
+        <div class="likes-widget_price" tabindex="0"></div>
+    </div>
+
+      <section class="medias-filter">
+        <label for="order" class="medias-filter_label">Trier par</label>
+        <select name="order" id="order" class="medias-filter_select" data-context="filter-select" aria-label="Trier les medias">
+
+          <option class="hide" value="" aria-label="Choisir une option">Sélectionner</option>
+          <option value="0">Popularité</option>
+          <option value="1">Date</option>
+          <option value="2">Titre</option>
+        </select>
+    </section>
+
+
+    <section class="media-container"></section>
     </main>
-    <div id="contact_modal">
+    <dialog aria-modal = true id="contact_modal" role="alertdialog">
 			<div class="modal">
 				<header>
-          <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" onclick="closeModal()" />
+          <h2 id="contact-me" tabindex="0">Contactez-moi</h2>
+          <img src="assets/icons/close.svg" onclick="closeModal()"tabindex="0"  />
         </header>
+
 				<form>
 					<div>
-						<label>Prénom</label>
-						<input />
-					</div>
-          <button class="contact_button">Envoyer</button>
+						<label for="first-name">Prénom</label>
+						<input type="text" id="first-name" name="first-name" required />
+          </div>
+          <div>
+            <label for="last-name">Nom</label>
+            <input type="text" id="last-name" name="last-name" required />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div>
+            <label for="message">Votre message</label>
+            <textarea id="message" name="message" rows="10" required></textarea>
+          </div>
+					
+          <button class="contact_button" type="submit" aria-label="Envoyer Votre message">Envoyer</button>
 				</form>
 			</div>
-		</div>
+		</dialog>
+
+    
     <script src="/scripts/pages/photographer.js"></script>
     <script src="/scripts/utils/contactForm.js"></script>
     <script src="scripts/templates/photographerpage.js"></script>
+    
   </body>
 </html>

@@ -4,7 +4,10 @@ body {
     font-family: "DM Sans", sans-serif;
     margin: 0;
 }
-
+.container {
+    max-width: 1240px;
+    margin: auto;
+}
 
 header {
     display: flex;
@@ -39,24 +42,27 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 400px;
-    justify-content: space-between;
+
 }
 
 .photographer_section article h2 {
     color: #D3573C;
     font-size: 36px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 
 }
 
 .photographer_section article img {
     height: 200px;
     width: 200px;
-    border-radius: 50%;
-    overflow: hidden;
     object-fit: cover;
+    border-radius: 50%;
     
 }
+.photographer_section article a {
+    text-decoration: none;
+  }
 
 
 .photographer-location {
